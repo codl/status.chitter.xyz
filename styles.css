@@ -1,0 +1,29 @@
+html {
+    font-family: sans-serif;
+    color: white;
+    background: #313;
+}
+
+main {
+    display: grid;
+    grid-template: "overall overall"
+                   "b c"/ 50% 50%;
+    max-width: 50em;
+    margin: auto;
+}
+
+main section {
+    background-color: #6664;
+    margin: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+main section#overall {
+    grid-area: overall;
+}
+
+section .status {
+    font-size: 4rem;
+    margin: 1rem .5rem;
+}
