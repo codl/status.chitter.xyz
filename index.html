@@ -4,19 +4,42 @@
         <title>Chitter status</title>
         <script src="main.js" async></script>
         <link rel="stylesheet" href="styles.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
+        <header>
+            <nav>
+                <a href="https://chitter.xyz">← Back to Chitter</a>
+            </nav>
+        </header>
         <main>
             <section id='overall'>
-                <p class='status'>Status unknown</p>
+                <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 280">
+                <g fill="none" stroke="#fff" stroke-width="3">
+                    <circle r="135.35" cy="139.885" cx="185.861"/>
+                    <path d="M264.77 148.466s.27 21.683-16.459 32.647c-4.52 2.95-16.133 3.438-22.982-.488-4.927-2.815-10.8-5.035-18.272-13.047-15.376-16.486-30.21-8.121-36.599-2.978a22.956 22.956 0 0 0-4.169 4.385c-2.652 3.628-11.369 13.048-30.86 14.13-24.227 1.354-28.098-32.267-27.665-35.244l-16.54-4.196c-.568-4.034 19.95-31.374 44.206-29.696 24.173 1.678 31.78 20.384 31.78 20.384s18.19 24.85 38.602-1.49c20.383-26.338 41.714-16.755 41.714-16.755s28.83 12.56 35.354 26.068z"/>
+                    <ellipse cx="139.598" cy="148.71" rx="13.021" ry="15.863"/>
+                    <ellipse cx="232.069" cy="148.71" rx="13.021" ry="15.863"/>
+                    <ellipse cx="188.379" cy="171.584" rx="12.236" ry="6.389"/>
+                    <path d="M218.426 81.035v26.068c0 .623.677 1.029 1.218.731l17.65-9.339c.27-.135.596-.135.84.027l14.157 9.123c.541.352 1.272-.054 1.272-.704V81.224c0-.704-.785-1.082-1.353-.65l-14.05 10.991c-.27.217-.677.244-.947.054l-17.514-11.26a.81.81 0 0 0-1.273.676z"/>
+                </g>
+                <g class='indicator'>
+                    <path class='ok' d="M227.344 229.672l21.13-21.129 21.227 21.226 68.319-68.318 19.858 19.858-89.449 89.449z" fill="white"/>
+                    <path class='warning' d="M281.29 173.384l3.348 77.53h24.425l3.347-77.53zm3.348 90.263v9.643h24.425v-9.643z" fill="#ffb611"/>
+                    <path class='error' d="M322.145 172.003l-29.81 29.812-29.812-29.812-21.606 21.607 29.81 29.811-29.81 29.812 21.606 21.606 29.811-29.812 29.811 29.812 21.607-21.606-29.811-29.812 29.811-29.811z" fill="#ff115e"/>
+                </g>
+                </svg>
+                <p class='status'>...</p>
+                <p class='subtitle'>...</p>
+                <div class='updates'></div>
             </section>
             <section id='chitter'>
                 <h1>chitter.xyz</h1>
-                <p class='status'>Unknown</p>
+                <p class='status'>...</p>
             </section>
             <section id='media'>
                 <h1>media.chitter.xyz</h1>
-                <p class='status'>Unknown</p>
+                <p class='status'>...</p>
             </section>
         </main>
     </body>

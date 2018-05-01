@@ -1,29 +1,107 @@
 html {
     font-family: sans-serif;
     color: white;
-    background: #313;
+    background-image: linear-gradient(200deg, #30113F, #3f1130);
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+body > * {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 main {
     display: grid;
-    grid-template: "overall overall"
-                   "b c"/ 50% 50%;
-    max-width: 50em;
+    grid-template: "overall overall"/ 50% 50%;
     margin: auto;
 }
 
 main section {
-    background-color: #6664;
+    background-color: #0002;
     margin: 1rem;
     text-align: center;
     padding: 1rem;
 }
 
+
 main section#overall {
     grid-area: overall;
+    background-color: transparent;
 }
 
 section .status {
     font-size: 4rem;
     margin: 1rem .5rem;
+}
+
+section .subtitle {
+    font-size: 1.3rem;
+}
+
+.logo {
+    height: 8rem;
+    margin: 0 auto;
+}
+
+.logo .indicator * {
+    display: none;
+}
+
+section#overall[data-status="ok"] .logo .indicator .ok {
+    display: block;
+}
+
+section#overall[data-status="warning"] .logo .indicator .warning {
+    display: block;
+}
+
+section#overall[data-status="error"] .logo .indicator .error {
+    display: block;
+}
+
+section:not(#overall)[data-status="warning"] {
+    outline: 2px solid #fb1;
+}
+
+section:not(#overall)[data-status="error"] {
+    outline: 2px solid #f15;
+}
+
+header {
+    background: black;
+    padding: .5rem;
+    max-width: 100%;
+    font-size: 1.1rem;
+}
+
+header nav {
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+nav a {
+    color: #a9a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        grid-template: 'overall' / 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    section .status {
+        font-size: 2.5rem;
+    }
+}
+
+.updates {
+    text-align: left;
 }
