@@ -118,7 +118,4 @@
     media_loop();
     updates_loop();
 
-    window.state = state;
-    window.refresh_ui = refresh_ui;
-
 })();
