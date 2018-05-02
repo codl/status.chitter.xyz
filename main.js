@@ -110,9 +110,9 @@
         }
     }
 
-    const chitter_loop = () => update_chitter().then(refresh_ui).then(wait).then(chitter_loop).catch(chitter_loop);
-    const media_loop = () => update_media().then(refresh_ui).then(wait).then(media_loop).catch(media_loop);
-    const updates_loop = () => update_updates().then(refresh_ui).then(wait).then(updates_loop).catch(updates_loop);
+    const chitter_loop = () => update_chitter().then(refresh_ui).then(wait).then(chitter_loop).catch(() => wait().then(chitter_loop));
+    const media_loop = () => update_media().then(refresh_ui).then(wait).then(media_loop).catch(() => wait().then(media_loop));
+    const updates_loop = () => update_updates().then(refresh_ui).then(wait).then(updates_loop).catch(() => wait().then(updates_loop));
 
     chitter_loop();
     media_loop();
