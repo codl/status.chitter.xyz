@@ -41,7 +41,7 @@
 
     const collapse_to_status = ([state, metrics]) => {
         if(state.down) return 'down'
-        else if(metrics.apdex < 0.85) return 'slow'
+        else if(metrics.apdex < 0.9) return 'slow'
         else return 'ok'
     };
 
