@@ -7,11 +7,8 @@
     const metrics_url_params = () => '?from=' +
         encodeURIComponent(
             // the quantization is to allow more efficient caching
-            (new Date(quantize(Date.now()
-                + 1000*60*60*2 // updown expects times in UTC+2???
-                , 60*60*1000)))
-            .toISOString().replace('T', ' ').replace('Z', '')
-            .replace(/\.[0-9]+/, ''));
+            (new Date(quantize(Date.now(), 60*60*1000))).toISOString()
+        );
 
         // wow i hate this!!!
 
