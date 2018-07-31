@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        <title>✒️ Chitter Status updater</title>
+    </head>
+    <body>
+        {% if message %}
+            <p style='background: yellow'>{{ message }} </p>
+        {% endif %}
+        <form method='post'>
+            <p>
+                <label>
+                    Password:
+                    <input name='password' type='password' autocomplete='current-password' value='{{password}}'/>
+                </label>
+            </p>
+            <p>
+                <textarea name='updates' rows='20' cols='80'>
+                    {{- updates -}}
+                </textarea>
+            </p>
+            <p>
+                <input type='submit'/>
+            </p>
+        </form>
+    </body>
+</html>
