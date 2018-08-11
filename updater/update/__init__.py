@@ -24,7 +24,10 @@ def get_updates():
 def set_updates(content):
     content = content.encode()
     updates.put(
-        Body=content, ContentLength=len(content), ContentType='text/html')
+        Body=content,
+        ContentLength=len(content),
+        ContentType='text/html',
+        CacheControl='no-cache')
 
 
 @app.route('/', methods=('GET', 'POST'))
