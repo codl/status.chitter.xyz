@@ -30,7 +30,9 @@
         return response;
     };
 
-    const get_updates = () => fetch("https://s3-eu-west-1.amazonaws.com/chitter-outages/updates.html").then(ensure_ok).then(r => r.text());
+    const get_updates = () => 
+        fetch("https://s3-eu-west-1.amazonaws.com/chitter-outages/updates.html?_=" + Date.now())
+            .then(ensure_ok).then(r => r.text());
 
     const state = {
         updates: '',
