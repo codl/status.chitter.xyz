@@ -18,18 +18,18 @@
     "default": {
         "boto3": {
             "hashes": [
-                "sha256:9ed1461b5b5566100eaaaf9406111e0613cd42e580ed737d9ec4224c31cad1f8",
-                "sha256:bb672601668a78ccbb3abdcea6b623e960b9db31e880dae5cc1fb7a7cf933e21"
+                "sha256:06ecdf57cc4a44ed2f7d555390aca2f3bab6b244abd000ee2d55bfb408ff90c8",
+                "sha256:16f0bb2cc55f9c8c96549a7211c3e5b7242c60ba186eee3d7e737210c76fd221"
             ],
             "index": "pypi",
-            "version": "==1.7.75"
+            "version": "==1.8.4"
         },
         "botocore": {
             "hashes": [
-                "sha256:82055917cb431c1cee7c737189a170cc92ffc3824a6da504e8d3ff4df9fa2eab",
-                "sha256:a288a894af5e0b2e9709d29d04536a01b9dfefd2d9d4ebac5c7d104103e6873d"
+                "sha256:284f25a67fa3470314ce78a53e57df8591549652ae31dce1097acefec195b694",
+                "sha256:8d0b64bfa0043b93cd779c8bf960bb0a8d763b6b803310b6bd49c62f564cc2af"
             ],
-            "version": "==1.10.75"
+            "version": "==1.11.4"
         },
         "click": {
             "hashes": [
@@ -109,6 +109,14 @@
                 "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb"
             ],
             "version": "==1.11.0"
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:a68ac5e15e76e7e5dd2b8f94007233e01effe3e50e8daddf69acfd81cb686baf",
+                "sha256:b5725a0bd4ba422ab0e66e89e030c806576753ea3ee08554382c14e685d117b5"
+            ],
+            "markers": "python_version >= '2.6' and python_version != '3.0.*' and python_version != '3.2.*' and python_version < '4' and python_version != '3.3.*' and python_version != '3.1.*'",
+            "version": "==1.23"
         },
         "werkzeug": {
             "hashes": [
