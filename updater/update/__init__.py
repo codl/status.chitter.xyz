@@ -4,6 +4,7 @@ from pathlib import Path
 from os import getenv
 from hashlib import blake2b
 from secrets import compare_digest
+from .ratelimit import RateLimit
 
 PASSWORD_HASH = getenv('CHITTER_STATUS_PWHASH')
 if not PASSWORD_HASH:
@@ -14,6 +15,9 @@ s3 = boto3.resource('s3')
 updates = s3.Object('chitter-outages', 'updates.html')
 
 app = Flask('update')
+
+limit = RateLimit(
+    redis_key_prefix='chitter-status-updater-rate-limit')  # that's a mouthful
 
 
 def get_updates():
@@ -32,7 +36,9 @@ def set_updates(content):
 
 @app.route('/', methods=('GET', 'POST'))
 def index():
-    # TODO rate-limiting
+    tokens = limit.hit(request.remote_addr)
+    if tokens < 0:
+        return 'hey chill out', 429
 
     password = request.form.get('password', request.cookies.get(
         'password', ''))
@@ -48,6 +54,7 @@ def index():
             msg = 'wrong password dingus'
             password = ''
         else:
+            limit.clear(request.remote_addr)
             set_updates(updates)
 
     template_path = Path(__file__).parent / 'template.html'
