@@ -36,7 +36,7 @@ def set_updates(content):
 
 @app.route('/', methods=('GET', 'POST'))
 def index():
-    tokens = limit.hit(request.remote_addr)
+    tokens = limit.hit(request.access_route[0])
     if tokens < 0:
         return 'hey chill out', 429
 
