@@ -16,25 +16,24 @@
     "default": {
         "boto3": {
             "hashes": [
-                "sha256:c667e1ba9677f37fe04afa3865840ade093529f353c5b4ba75222864f6478f74",
-                "sha256:f27a07b772820a2e5f30f924beba0db47a1d624dc4c32b2cd4def9aba9591130"
+                "sha256:0409ee2b927a8767ca629c5d2f09799e937636ec0f0123842b63f526ec170c0c",
+                "sha256:3e31a82b3739e44dc47ab99f514ff9ef9b230f38ecf4dbe04a90edc53b284468"
             ],
             "index": "pypi",
-            "version": "==1.9.18"
+            "version": "==1.9.20"
         },
         "botocore": {
             "hashes": [
-                "sha256:d11fa0e12448105989f1f4eebf093e8cfba5f90860640c488f3211ff2a744df0",
-                "sha256:f4167537e59da13539e1b320018acd482f708c85308959a9ada3809061f07738"
+                "sha256:4152cd92e7f979707e35be7d4fa18f0435050b460e0a54cd88db27c2586d8886",
+                "sha256:dde120395f3775fa2273c1e0e5b909532f74461601d85c6c5f5f719991cffd22"
             ],
-            "version": "==1.12.18"
+            "version": "==1.12.20"
         },
         "click": {
             "hashes": [
                 "sha256:2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13",
                 "sha256:5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7"
             ],
-            "markers": "python_version >= '2.7' and python_version != '3.3.*' and python_version != '3.0.*' and python_version != '3.1.*' and python_version != '3.2.*'",
             "version": "==7.0"
         },
         "docutils": {
@@ -122,7 +121,6 @@
                 "sha256:a68ac5e15e76e7e5dd2b8f94007233e01effe3e50e8daddf69acfd81cb686baf",
                 "sha256:b5725a0bd4ba422ab0e66e89e030c806576753ea3ee08554382c14e685d117b5"
             ],
-            "markers": "python_version != '3.3.*' and python_version != '3.2.*' and python_version >= '2.6' and python_version < '4' and python_version != '3.1.*' and python_version != '3.0.*'",
             "version": "==1.23"
         },
         "werkzeug": {
