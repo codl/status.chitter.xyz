@@ -104,8 +104,13 @@ nav a {
 
 .updates {
     text-align: left;
+    line-height: 1.33em;
 }
 
 .updates a {
     color: white;
+}
+
+.updates li {
+    margin-top: .5em;
 }
