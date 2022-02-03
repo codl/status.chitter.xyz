@@ -69,7 +69,7 @@
         const chitter = document.getElementById('chitter');
         const media = document.getElementById('media');
 
-        const updates = document.querySelector('#overall .updates');
+        const updates = document.querySelector('#updates');
 
 
         if(state.chitter_status == 'ok' && state.media_status == 'ok'){
